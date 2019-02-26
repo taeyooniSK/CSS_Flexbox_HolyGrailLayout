@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* min-height: 100vh; */
+}
+
+header {
+    display: flex;
+    /* flex-direction: row; 디폴트값이라 굳이 쓸 필요가 없다.*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    min-height: 800px;
+}
+
+/* .item {
+    flex-grow: 1;
+} */
+
+article {
+    flex: 3 1 60%;
+    /* flex-basis: 60%;
+    flex-grow: 3; */
+    /* order: 1; */
+    background-color: chartreuse;
+}
+
+nav {
+    flex: 1 1 20%;
+    /* flex-basis: 20%;
+    flex-grow: 1; */
+    background-color: bisque;
+    order: -1; /*This is the simplest solution*/
+    /* order: 0; */
+}
+
+aside {
+    flex: 1 1 20%;
+    /* flex-grow: 1;
+    flex-basis: 20%; */
+    background-color: cornflowerblue;
+    
+    /* order: 2; */
+}
+
+header, footer {
+    flex-basis: 100px; /*이걸로 가능하다는 걸 확인하기 위해서 사용함*/
+    /* height: 70px;  */
+    background-color: aquamarine;
+}
+
+
+@media screen and (max-width: 640px) {
+    main {
+        flex-direction: column;
+        flex-grow: 1; /*브레이크포인트를 지났을때 main (flex item)이 빈 공간을 꽉 채우도록 하기 위해서 그러나 이 경우엔 이게 없어도 잘됨*/
+    }
+    article {
+        order : 0;
+
+    }
+    nav {
+        order: 1;
+      
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    border-collapse: collapse;
+    height: 800px;
+    flex-wrap: wrap;
+}
+
+#header {
+    display: flex;
+    height: 40px;
+    background-color: aqua;
+    justify-content: space-between;
+}
+
+.item {
+    border: 2px solid black;
+    flex-grow: 1;
+}
+nav {
+    background-color: bisque;
+    border-bottom: 0px;
+    flex-shrink: 2;
+   
+}
+aside {
+    background-color: chartreuse;
+    border-top: 0px;
+    flex-shrink: 2;
+}
+.content {
+    flex-grow: 3;
+    flex-shrink: 0;
+   
+}
+footer {
+    display: flex;
+    height: 40px;
+    background-color: aqua;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        flex-direction: column;
+    }
+    nav {
+        order: 1;
+        flex-grow: 0;
+        flex-basis: 50px;
+    }
+    .item {
+        flex-grow: 0;
+    }
+    .content {
+        flex-grow: 2;
+    }
+    aside {
+        order: 2;
+        flex-grow:0;
+        flex-basis: 50px;
+        
+    }
+} 
+*/
